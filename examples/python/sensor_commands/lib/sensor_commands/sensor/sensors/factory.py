@@ -3,6 +3,7 @@ from ..sensor import Sensor
 from .temp import TempSensor
 from .level import LevelSensor
 from .voltage import VoltageSensor
+from .light import LightSensor
 
 
 class SensorFactory():
@@ -11,6 +12,7 @@ class SensorFactory():
             "temperature": TempSensor,
             "level": LevelSensor,
             "voltage": VoltageSensor,
+            "light": LightSensor,
         }
 
     def __call__(self, name: str, sensor_type: str) -> Sensor:
